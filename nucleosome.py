@@ -1,3 +1,5 @@
+import numpy as np
+
 class Nucleosome(object):
 
     def __init__(self, n_histones=2):
@@ -7,4 +9,4 @@ class Nucleosome(object):
         self.initialize()
 
     def initialize(self):
-        self.histones = [[0,0] for h in range(self.n_histones)]
+        self.histones = np.array([[0,0] for h in range(self.n_histones)])
