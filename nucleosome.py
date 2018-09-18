@@ -18,7 +18,7 @@ class Nucleosome(object):
         self.initialize()
 
     def __str__(self):
-        return "".join([str(h)+" "  for h in self.histones])     
+        return "".join([str(h)+" "  for h in self.histones]) 
 
 
     def initialize(self):
