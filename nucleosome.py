@@ -6,5 +6,8 @@ class Nucleosome(object):
 
         self.initialize()
 
+    def __str__(self):
+        return "".join([str(h)+" "  for h in self.histones]) 
+
     def initialize(self):
         self.histones = [[0,0] for h in range(self.n_histones)]
