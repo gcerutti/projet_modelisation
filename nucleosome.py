@@ -4,7 +4,8 @@ class Nucleosome(object):
 
     def __init__(self, n_histones=2):
         self.n_histones = n_histones
-        self.histones = None
+        self.histone_states = None
+        self.histone_nucleations = None
 
         self.initialize()
 
@@ -12,4 +13,6 @@ class Nucleosome(object):
         return "".join([str(h)+" "  for h in self.histones]) 
 
     def initialize(self):
-        self.histones = np.array([[0,0] for h in range(self.n_histones)])
+        self.histone_states = np.array([0 for h in range(self.n_histones)])
+        self.histone_nucleations = np.array([0 for h in range(self.n_histones)])
+
